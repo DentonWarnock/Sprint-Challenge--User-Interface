@@ -69,7 +69,10 @@ p {
 .container {
     width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .container .nav-header {
     display: flex;
@@ -196,8 +199,9 @@ header nav a {
 
 .bottom-content {
     display: flex;
-    margin: 0 2% 20px;
     justify-content: space-around;
+    margin: 0 2% 20px;
+    
 }
 
 .bottom-content .text-container {
@@ -286,4 +290,54 @@ footer nav a {
 .container .bottom-container {
     margin: 30px 0 30px 10px;
     padding: 15px
+}
+
+/* stretch goal */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .nav-header {
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .top-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .top-container .about-banner {
+        display: none;
+    }
+    .middle-container {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .middle-container .about-box {
+        width: 100%;
+    }
+    .middle-content .boxes {
+        display: flex;
+        justify-content: center;
+        width: 1500px;
+        flex-flow: column wrap;
+    }
+    .top-content .banner {
+        display: none;
+        justify-content: space-around;
+    }
+    .top-content {
+        flex-direction: column;
+        width: 100%
+    }
+    .bottom-content {
+        flex-direction: column;
+        width: 100%
+    }
+
 }
