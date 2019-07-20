@@ -304,6 +304,10 @@ footer nav a {
         display: flex;
         justify-content: space-around;
     }
+    .nav-header a {
+        padding: 5px;
+        margin: 5px;
+    }
     .top-container {
         display: flex;
         flex-direction: column;
