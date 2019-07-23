@@ -69,7 +69,41 @@ p {
 .container {
     width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+
+
+.container .nav-header {
+    display: flex;
+    align-content: stretch;
+	}
+
+.container .nav-header nav {
+	display: flex;
+    justify-content: space-between;
+    align-content: center;
+    }
+
+
+
+header nav a {
+	padding: 15px;
+	margin: 25px 40px 0 0;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    }
+
+.logo{
+	width: 150px;
+	height: 80px;
+	margin: 25px 50px 0 0px;
+	background-image: url("../img/lambda-black.png");
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+	}
 
 .top-content {
     display: flex;
@@ -83,7 +117,8 @@ p {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
-}
+    margin-top: 25px;
+    }
 
 .middle-content {
     margin-bottom: 20px;
@@ -112,10 +147,61 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box:nth-child(1) {
+    color: white;
+    background: teal;
+}
+
+.middle-content .boxes .box:nth-child(2) {
+    color: white;
+    background: gold;
+}
+
+.middle-content .boxes .box:nth-child(3) {
+    color: white;
+    background: cadetblue;
+}
+
+.middle-content .boxes .box:nth-child(4) {
+    color: white;
+    background: coral;
+}
+
+.middle-content .boxes .box:nth-child(5) {
+    color: white;
+    background: crimson;
+}
+
+.middle-content .boxes .box:nth-child(6) {
+    color: white;
+    background: forestgreen;
+}
+
+.middle-content .boxes .box:nth-child(7) {
+    color: white;
+    background: darkorchid;
+}
+
+.middle-content .boxes .box:nth-child(8) {
+    color: white;
+    background: hotpink;
+}
+
+.middle-content .boxes .box:nth-child(9) {
+    color: white;
+    background: indigo;
+}
+
+.middle-content .boxes .box:nth-child(10) {
+    color: white;
+    background: dodgerblue;
+}
+
 .bottom-content {
     display: flex;
-    margin: 0 2% 20px;
     justify-content: space-around;
+    margin: 0 2% 20px;
+    
 }
 
 .bottom-content .text-container {
@@ -143,4 +229,119 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+.container .about-banner {
+    margin-bottom: 25px;
+}
+
+.container .top-container {
+    margin-bottom: 25px;
+    border-bottom: 1px dashed grey;
+}
+
+.container .top-container p {
+    margin-bottom: 25px;
+}
+
+.container .middle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .middle-container .about-box {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    padding: 10px;
+    margin: 0 10px;
+    border-bottom: 1px dashed black;
+}
+
+.container .middle-container .about-box:last-child {
+    margin-top: 25px;
+    border-bottom: 1px dashed grey;
+}
+
+.container .middle-container .about-box:nth-last-child(2) {
+    margin-top: 25px;
+    border-bottom: 1px dashed grey;
+}
+
+.container .middle-container .about-box h2 {
+    margin-top: 15px;
+}
+
+.container .middle-container .about-box .learn-more {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+	color: black;	
+	width: 120px;
+	height: 40px; 
+    text-decoration: none;
+	padding-top: 10px;
+	margin: 20px 0;
+    border: 1.2px solid black;
+    border-radius: 10px;
+}
+
+.container .bottom-container {
+    margin: 30px 0 30px 10px;
+    padding: 15px
+}
+
+/* stretch goal */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .nav-header {
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-header a {
+        padding: 5px;
+        margin: 5px;
+    }
+    .top-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .top-container .about-banner {
+        display: none;
+    }
+    .middle-container {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .middle-container .about-box {
+        width: 100%;
+    }
+    .middle-content .boxes {
+        display: flex;
+        justify-content: center;
+        width: 1500px;
+        flex-flow: column wrap;
+    }
+    .top-content .banner {
+        display: none;
+        justify-content: space-around;
+    }
+    .top-content {
+        flex-direction: column;
+        width: 100%
+    }
+    .bottom-content {
+        flex-direction: column;
+        width: 100%
+    }
+
 }
